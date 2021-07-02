@@ -37,7 +37,7 @@ for email in lines:
     else:
         print("{}[ERROR] {}".format(Fore.RED, email))
     time.sleep(0.5)
-print("\n\nDone Checking")
+print(f"\n\n{Fore.WHITE}Done Checking")
 time.sleep(20)
 sys.exit()
 
