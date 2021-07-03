@@ -15,7 +15,6 @@ if not os.path.exists("./emails.txt"):
 emails = open('emails.txt', 'r')
 lines = emails.readlines()
 for email in lines:
-    os.system(f'title GETTR Reg Checker by clout - Checked: {count}/{len(lines)} - Hits: {hits}')
     count = count + 1
     link = "https://api.gettr.com/s/email/exists?email=" + email
     data = ""
@@ -36,8 +35,8 @@ for email in lines:
             print("{}[ERROR] {}".format(Fore.RED, email))
     else:
         print("{}[ERROR] {}".format(Fore.RED, email))
+    os.system(f'title GETTR Reg Checker by clout - Checked: {count}/{len(lines)} - Hits: {hits}')   
     time.sleep(0.5)
 print(f"\n\n{Fore.WHITE}Done Checking")
 time.sleep(20)
 sys.exit()
-
