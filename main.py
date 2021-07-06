@@ -34,7 +34,7 @@ for email in lines:
         else:
             print("{}[ERROR] {}".format(Fore.RED, email))
     else:
-        print("{}[ERROR] {}".format(Fore.RED, email))
+        print("{}[ERROR] You are rate limited!".format(Fore.RED))
     os.system(f'title GETTR Reg Checker by clout - Checked: {count}/{len(lines)} - Hits: {hits}')   
     time.sleep(0.5)
 print(f"\n\n{Fore.WHITE}Done Checking")
