@@ -17,12 +17,11 @@ lines = emails.readlines()
 for email in lines:
     count = count + 1
     link = "https://api.gettr.com/s/email/exists?email=" + email
-    data = ""
     header = {
     "accept": "application/json, */*",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     }
-    response = requests.get(link, data=data, headers=header).text
+    response = requests.get(link, headers=header).text
     data = response
     if "OK" in data:
         if "false" in data:      
